@@ -1,0 +1,166 @@
+﻿<!doctype html>
+
+<head>
+	<title>Hi, I&#8217;m Alex.</title>		
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="./images/favicon.png" />
+	<meta name="copyright" content="Copyright by Alex Cican. 2013" />
+	<meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
+  <meta property="og:title" content="Parallax Scrolling" /> 
+  <meta property="og:description" content="Demo website showcasing a responsive parallax effect." />  
+  <meta property="og:image" content="http://farm9.staticflickr.com/8354/8428703841_b60a2026d5_o.jpg" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sican">
+  <meta name="twitter:creator" content="@sican">
+  <meta name="twitter:url" content="http://lab.sicanstudios.com/scrollr/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="./style/style.css" />
+	<link rel="stylesheet" href="./fancybox/jquery.fancybox.css?v=2.1.3" type="text/css" media="screen" />
+</head>
+<body>
+	<div id="skrollr-body">
+	<div id="header">
+	</div><!--end div_header-->
+
+	<div id="home-slides">
+		<div data-bottom-top="background-position: 50% 170px;" data-top-bottom="background-position: 50% -170px;">
+			<p data="opacity: 1" data-top-bottom="opacity: 0">Scrolling <span>all day</span>, like&#8230;</p>
+		</div>
+		<div data-bottom-top="background-position: 50% 170px;" data-top-bottom="background-position: 50% -170px;">
+			<p data-bottom-top="opacity: 0" data-center-bottom="opacity: 1" data-top-bottom="opacity: 0">&#8230;there&#8217;s no <span>tommorrow!</span></p>
+		</div>
+		<div data-bottom-top="background-position: 50% 170px;" data-top-bottom="background-position: 50% -170px;">
+			<p data-bottom-top="opacity: 0" data-center-bottom="opacity: 1" data-top-bottom="opacity: 0">Or <span>yesterday</span> for that matter!</span></p>
+		</div>
+	</div>
+
+	<div id="container">
+		<div id="content">
+			
+		</div><!--end div_content-->
+
+		<footer>
+			<p><a href="#" title="Back to Top">Back to Top</a> &bull; <a href="mailto:alex@sicanstudios.com?&subject=Hi%20Alex" title="Get in Touch">Get in Touch</a><br/>
+				Made by<span> the hand of</span> <a href="http://twitter.com/sican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a>. Source code on <a href="http://github.com/sican/lab/tree/gh-pages/scrollr" target="_blank" title="Source code on GitHub">GitHub</a>.<br/>
+			</p>
+		</footer>
+	</div><!--end div_container-->
+	</div>
+
+	<!-- Loads jQuery script -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+	<!-- Loads FancyBox script for website images -->
+	<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js?v=2.1.3"></script>
+	<script type="text/javascript" src="./fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+	<script type="text/javascript" src="./javascript/skrollr.min.js"></script>
+
+	<script type="text/javascript">
+	//http://detectmobilebrowsers.com/ + tablets
+	(function(a) {
+		if(/android|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(ad|hone|od)|iris|kindle|lge |maemo|meego.+mobile|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(di|rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))
+		{
+			//Add skrollr mobile on mobile devices.
+			document.write('<script type="text/javascript" src="./javascript/skrollr.mobile.min.js"><\/script>');
+		}
+	})(navigator.userAgent||navigator.vendor||window.opera);
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+				/* iOS re-orientation fix */
+				var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
+				if (viewportmeta) {
+					viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+					document.body.addEventListener('gesturestart', function() {
+						viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+					}, false);
+				}
+
+				/* width specific adjustments */
+				var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+				if (width < "768") {
+					/* hides extra content */
+					$("footer span").hide();
+
+					/* hides Safari address bar on iPhone */
+					window.addEventListener("load",function() {
+						setTimeout(function() {
+							window.scrollTo(0, 1);
+						}, 400);
+					});
+				} else {
+					/* adjusts position of the background images on orientation change */
+					function doOnOrientationChange() {
+						switch(window.orientation) {
+							case -90:
+							case 90:
+								$("#home-slides div").css("-webkit-background-size", "1088px 680px");
+								break;
+							default:
+								$("#home-slides div").css("-webkit-background-size", "1536px 960px");
+								break;
+						}
+					}
+
+					window.onorientationchange = function(){doOnOrientationChange();};
+					doOnOrientationChange();
+				}
+			}
+
+			/* browser specific adjustments */
+			var chrome = navigator.userAgent.match(/Chrome/i) != null;
+			if(chrome) {
+			}
+
+			/* initiates script for loading website images */
+			$(".fancybox").fancybox();
+			$('.fancybox-media').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+				helpers : {
+					media : {}
+				}
+			});
+
+			/* when window resized, adjust height of div and refresh scrolling script */
+			function adjustHeight(needs_refresh) {
+				winH = window.innerHeight;
+				$("#home-slides div").css("height", winH);
+				if(needs_refresh == 1) {
+					s.refresh();
+				}
+			}
+
+			/* on window resize, call function to resize height of div */
+			$(window).resize(function() {
+				var needs_refresh = 1;
+				adjustHeight(needs_refresh);
+			});
+
+			/* on first load, call function to resize height of div to appropriate screen size */
+			adjustHeight();
+
+			/* initiates the scrolling script */
+			var s = skrollr.init({
+				forceHeight: false
+			});
+ 		});
+	</script>
+
+	<!--script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-6273751-7']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script-->
+</body>
+</html>

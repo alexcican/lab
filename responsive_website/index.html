@@ -1,0 +1,153 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>A simple responsive website &mdash; Demo by Alex Cican</title>
+  <meta name="description" content="A simple responsive website – Demo by Alex Cican">
+  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
+  <meta property="og:title" content="A simple responsive website" /> 
+  <meta property="og:description" content="Demo website showcasing how to create a responsive website in seconds." />  
+  <meta property="og:image" content="http://farm9.staticflickr.com/8354/8428703841_b60a2026d5_o.jpg" /> 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sican">
+  <meta name="twitter:creator" content="@sican">
+  <meta name="twitter:url" content="http://lab.sicanstudios.com/responsive_website/">
+  <meta name="viewport" content="width=device-width"/>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Pirata+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="content">
+    <h1>A simple responsive website</h1>
+
+    <p>Resize this website to see how it works. The simplest code required to make your website responsive:</p>
+
+<pre><code>body {
+  max-width: 680px;
+  margin: 0 auto;
+}</code></pre>
+
+    <p>That&rsquo;s it. The content will stay centered and resize nicely on small screens.</p>
+
+    <p>You could stop there, but let&rsquo;s build on that and improve usability.</p>
+
+    <h2>Mobile Safari issue</h2>
+    <p>First, let&rsquo;s fix an issue with mobile Safari that renders the website in <code>980px</code> (<a href="http://developer.apple.com/library/ios/#documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html" target="_blank">more on viewports</a>) and might give you some headeaches with styling your layout. To fix that, we add a meta tag in HTML that basically says one screen pixel equals one viewport pixel:</p>
+
+    <pre><code>&lt;meta name="viewport" content="width=device-width"/&gt;</code></pre>
+
+    <h2>Responsive images and videos</h2>
+    <p>Let&rsquo;s add some CSS code to also make our images and videos responsive:</p>
+
+<pre><code>img, embed, object, video {
+  max-width: 100%;
+}</code></pre>
+
+    <h2>Small screens</h2>
+    <p>We could stop here but let&rsquo;s further improve the layout on small screens. I define <em>small screens</em> as devices that have a resolution smaller than <code>767px</code>. I chose this number for pixels so that I exclude the iPad, which has a width of <code>768px</code>, from the small screens (i.e. mobile) category.</p>
+
+    <p>For small screens we make the font smaller, the line height smaller, add some horizontal spacing to content, and increase the contrast of the text. We also make the main heading of the website smaller:</p>
+
+<pre><code>@media screen and (max-width: 767px) {
+  body {
+    font-size: 1em; /* if desktop body size is not default (mine is 18px) */
+    line-height: 1.6em;
+    color: #111;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}</code></pre>
+
+    <p>So, for a not-so-simple responsive website you add a total of 19 lines of code. Not bad.</p>
+
+    <h2>Large screens</h2>
+
+    <p>For the sake of this tutorial, I also added a <em>large screen</em> media query that increases the font size of everything. The pixel width was pretty much a random number not exceeding <code>1440px</code> (biggest resolution on non-retina MacBook Pros/Airs):</p>
+
+<pre><code>@media screen and (min-width: 1375px) {
+  body {
+    font-size: 1.33333333em;
+  }
+}</code></pre>
+
+    <h2>Dummy content</h2>
+    <p>What follows next is some dummy content to see more HTML elements in action.</p>
+    
+    <p><a href="http://www.flickr.com/photos/sican/8428703841/in/photostream" target="_blank"><img src="http://farm9.staticflickr.com/8354/8428703841_b60a2026d5_o.jpg" alt="budapest bridge" /></a></p>
+
+    <blockquote>Bestibulum egestas tortor nec nisl sodales commodo. Cras neque elit, aliquam et venenatis at</blockquote>
+
+    <ul>
+      <li>Class aptent taciti sociosqu ad</li>
+      <li>litora torquent per conubia nostra</li>
+    </ul>
+
+    <p><iframe src="http://player.vimeo.com/video/36277251?title=0&amp;byline=0&amp;portrait=0" width="100%" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+  </div>
+
+  <div class="menu">
+    <span>MENU</span>
+    <a href="#">Something</a>
+    <a href="#">Something</a>
+    <a href="#">Something</a>
+    <a href="#">Something</a>
+  </div>
+
+  <footer>
+    <a href="#" class="show_wireframe">View wireframe</a>. Made by <a href="http://twitter.com/sican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a>. Source code on <a href="http://github.com/sican/lab/tree/gh-pages/responsive_website" target="_blank" title="GitHub">GitHub</a>.<br/>
+    <div class="share_buttons">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="sican" data-align="right" data-related="sican">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsicanstudios.com%2Fresponsive-website&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;font=lucida+grande&amp;colorscheme=light&amp;action=recommend&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:21px;" allowTransparency="true"></iframe>
+    </div>
+  </footer>
+
+  <div class="technical">
+    <b>Window width: <span></span> &bull; Layout active: <span></span></b>
+  </div>
+
+  <!-- Load jQuery script -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    // hides Safari address bar on iPhone
+    if (navigator.userAgent.match(/iPhone/i)) {
+      window.addEventListener("load",function() {
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 200);
+      });
+    }
+
+    // shows wireframe
+    $('.show_wireframe').click(function(e) {
+      $('body').toggleClass('has_wireframe');
+      e.preventDefault();
+    })
+
+    // calculates width and shows which layout is active
+    function calculate() {
+      var width = $(window).width();
+      $('.technical b>span:nth-of-type(1)').html(width + 'px');
+      if (width > 1367) {
+        $('.technical b>span:nth-of-type(2)').html('Large (3/3)').removeClass().addClass('large');
+      } else if (width > 767) {
+        $('.technical b>span:nth-of-type(2)').html('Medium (2/3)').removeClass().addClass('medium');
+      } else {
+        $('.technical b>span:nth-of-type(2)').html('Small (1/3)').removeClass().addClass('small');
+      }
+    }
+
+    // runs at load
+    calculate();
+
+    // runs whenever user resizes the window
+    $(window).resize(function() {
+      calculate();
+    })
+  </script>
+</body>
+</html>

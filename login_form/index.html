@@ -1,0 +1,101 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="favicon.png" />
+	<title>Login form with CSS3 &amp; HTML5</title>
+	<meta name="description" content="Mailer login form | SicanStudios.com">
+	<meta name="author" content="https://plus.google.com/116801469202683881648/" />
+	<meta property="og:title" content="Login form with CSS3 &amp; HTML5" /> 
+	<meta property="og:description" content="Demo website showcasing a cool login form." />  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@sican">
+	<meta name="twitter:creator" content="@sican">
+	<meta name="twitter:url" content="http://lab.sicanstudios.com/login_form/">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.9"/>
+</head>
+
+<body>
+	<header><a href="http://rnailer.com" title="Website of Mailer"><img src="mailer-logo.jpg" alt="mailer logo"></a></header>
+	
+	<div id="main">
+		<form>
+			<div>
+				<a href="#" class="create_account" title="Create an account">Create an account</a>
+				<input type="text" tabindex="1" placeholder="username" value="" required />
+				<input type="password" tabindex="2" placeholder="password" value="" required />
+				<a href="#" class="forgot_password" title="Forgot password">Forgot password</a>
+			</div>
+			<p>
+				<input type="submit" tabindex="3" value="Login" />
+			</p>
+		</form>
+	</div>
+
+	<footer><a href="https://twitter.com/share" class="twitter-share-button" data-via="sican" data-related="sican">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/sican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/sican/lab/tree/gh-pages/login_form" target="_blank" title="GitHub">GitHub</a><br/><a href="http://sicanstudios.com" title="SicanStudios" target="_blank" class="logo"><img src="http://sicanstudios.com/images/logo-light.svg" alt="sicanstudios logo" /></a>
+	</footer>
+	
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/* iOS re-orientation fix */	
+			if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+				var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
+				if (viewportmeta) {
+					viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+
+					document.body.addEventListener('gesturestart', function() {
+						viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+					}, false);
+				}
+
+				/* iOS hides Safari address bar */
+				window.addEventListener("load",function() {
+					setTimeout(function() {
+						window.scrollTo(0, 1);
+					}, 500);
+				});
+			}
+
+			/* add the modal window (only if JS is enabled) */
+			$('<div id="modal_window"><section></section></div>').insertAfter("footer");
+
+			/* on form submit, display error if it doesn’t exist */
+			$("#main form").submit(function(e) {
+				if($('.error').length == 0) {
+					$('<span class="error">Wrong username or password</span>').insertBefore("#main form div");
+				} else {
+					//do nothing
+				}
+				e.preventDefault();
+			});
+
+			/* create account on click show window */
+			$(".create_account").click(function(e) {
+				$("#modal_window section").html('<h3>Create an account</h3><form><input type="text" tabindex="4" placeholder="username" value="" required /><br/><input type="email" tabindex="5" placeholder="email" value="" required /><br/><input type="submit" tabindex="6" value="Create Account" /></form><small>Form is not active yet.</small>');
+				$("#modal_window").slideDown("slow");
+				e.preventDefault();
+			});
+
+			/* forgot password on click show window */
+			$(".forgot_password").click(function(e) {
+				$("#modal_window section").html('<h3>Forgot password</h3><form><input type="email" tabindex="7" placeholder="email" value="" required /><br/><input type="submit" tabindex="7" value="Forgot Password" /></form><small>Form is not active yet.</small>');
+				$("#modal_window").slideDown("slow");
+				e.preventDefault();
+			});
+
+			/* on gray area click, hide window */
+			$("#modal_window").click(function() {
+				$("#modal_window").slideUp("slow");
+			});
+
+			/* prevent hiding window on content area click */
+			$("#modal_window section").click(function(e) {
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>

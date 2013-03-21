@@ -1,0 +1,135 @@
+/* =================================================
+   CREATED (C) BY ALEX CICAN           NOVEMBER 2010
+   HTTP://SICANSTUDIOS.COM
+   ================================================= */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #fff;
+  height: 100%;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin-top: 6em;
+}
+#container /* positions the container of website */ {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10em;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  margin-top: 50px;
+  bottom: 0px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  height: 30px;
+  padding-top: 10px;
+  text-align: center;
+}
+a:link,
+a:visited /* styles the links */ {
+  color: #111111;
+  text-decoration: none;
+  padding-bottom: 0.1875em; /* 3px / 16px */
+}
+a:hover /* changes the colour of text when hovered */ {
+  color: #fe580f;
+  cursor: pointer;
+}
+a:active /* button effect when link is clicked */ {
+  padding-bottom: 0.1875em; /* 3px / 16px */
+  color: #c33d03;
+  outline: none !important;
+}
+#footer a {
+  border-bottom-color: #b3dfff;
+  color: #fff;
+}
+#footer a:hover {
+  color: #b3dfff;
+  cursor: pointer;
+}
+h1,
+h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.4em;
+  display: none;
+  line-height: 1.3em;
+}
+h2 {
+  background: #eee;
+  padding: 1em;
+}
+.message {  text-align: center }
+.message_click {
+  margin-top: 3em;
+  min-height: 1em;
+  text-align: center;
+  position: relative;
+}
+.message_click a {
+  color: #f00;
+  position: absolute;
+  text-transform: lowercase;
+  right: 10px;
+  font-size: 1.2em;
+  top: 0;
+  border: none !important;
+}
+.reset {
+  text-align: center;
+  padding-bottom: 1em;
+}
+p.info {
+  font-size: 19px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+p.info span {  color: #666 }
+footer {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  margin-top: 4%;
+  color: #999;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center;
+}
+a:hover {  color: #7da1b3 }
+a:active {
+  top: 1px;
+  position: relative;
+  text-shadow: none;
+}
+.twitter-share-button {
+  vertical-align: -25%;
+  margin-right: -25px !important;
+}
+.logo {
+  border-bottom: none !important;
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  padding: 15px;
+  display: inline-block;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.logo:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}

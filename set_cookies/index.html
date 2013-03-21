@@ -1,0 +1,97 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="favicon.png" />
+  <title>How to set cookies with JavaScript Demo</title>
+  <meta name="description" content="How to set cookies with JavaScript Demo">
+  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
+  <meta property="og:title" content="How to set cookies with JavaScript Demo" /> 
+  <meta property="og:description" content="Demo website showing you how to set cookies with JavaScript." />  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@sican">
+  <meta name="twitter:creator" content="@sican">
+  <meta name="twitter:url" content="http://lab.sicanstudios.com/set_cookies/">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div class="message">
+      <h1>This message is displayed only the first time you visit this page. Refresh your page to hide it!</h1>
+      <h3>This is shown only after the previous message was shown in the last visit. Even when you refresh the page, the browser remembers your option. In case JS is disabled, this message is more important and should be displayed!</h3>
+    </div>
+
+    <div class="message_click">
+      <h2>You can only hide this message, by clicking the  &ldquo;X&rdquo; on the right of this box <a href="#" title="Hide This Message">X</a></h2>
+      <h3>This is a new message. Even when you refresh the page, the browser remembers your option.<br/>In case JS is disabled, this message is more important and should be displayed!</h3>
+    </div>
+  </div><!--end div_container-->
+
+  <footer>
+    <div class="reset">To restart, click here to <a href="">remove cookies</a>.</div>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="sican" data-related="sican">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/sican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/sican/lab/tree/gh-pages/set_cookies" target="_blank" title="GitHub">GitHub</a><br/><a href="http://sicanstudios.com" title="SicanStudios" target="_blank" class="logo"><img src="http://sicanstudios.com/images/logo-dark.svg" alt="sicanstudios logo" /></a>
+  </footer>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="cookie.js"></script>
+  <script type="text/JavaScript">
+    $(document).ready(function() {
+
+      $('h3').css("display", "none"); //hide the message by default
+      $('h1').css("display", "block"); //display the welcome text
+      $('h2').css("display", "block"); //display the welcome text
+
+      //when clicked X do something
+      $('.message_click a').click(function() {
+        var $this = $(this);
+        if ($this.hasClass('clicked')) {
+          //check that if it was cliked before or not
+        } else {  //else means that link wasn't clicked
+          $(this).addClass('clicked'); //add class that the link is clicked and shot the footer with delay
+          $('.message_click h2').delay(200).fadeOut(1300)
+          .queue(function(n) { //after the message fades-out, display the other message
+            $('.message_click h3').css("display", "block"); 
+            n();
+          });
+          
+          $.cookie('welcome2', 'clicked', {expires: 7 }); //add cookie setting that user has clicked
+        }
+        return false;
+      });
+
+      //reset the cookies (not shown in tutorial)
+      $('.reset a').click(function() {
+        var $this = $(this);
+        if ($this.hasClass('clicked')) {
+          //check that if it was cliked before or not
+        } else {  //else means that link wasn't clicked
+          $(this).addClass('clicked'); //add class that the link is clicked and shot the footer with delay
+          $.cookie('welcome', 'not_hide', {expires: 7 }); //add cookie setting that user has clicked
+          $.cookie('welcome2', 'not_clicked', {expires: 7 }); //add cookie setting that user has clicked
+        }
+        location.reload();
+      });
+
+      // COOKIES
+      var cookie_mesage = $.cookie('welcome');
+
+      if (cookie_mesage == 'hide') { //if the cookie_mesage equals hide, hide the message
+        $('.message h1').css("display", "none");
+        $('.message h3').css("display", "block");
+      };
+
+      var cookie_mesage_clicked = $.cookie('welcome2'); //set the variable for cookie
+
+      if (cookie_mesage_clicked == 'clicked') { //if the cookie_mesage equals clicked, means user opted to hide message
+        $('.message_click h2').css("display", "none");
+        $('.message_click h3').css("display", "block");
+      };
+
+      $.cookie('welcome', 'hide', {expires: 7 }); //add cookie to hide the first message after load (on refresh it will be hidden)
+    });
+  </script>
+</body>
+</html>

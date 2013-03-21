@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="shortcut icon" href="favicon.png" />
+	<title>Account Menu Dropdown &#8211; CSS3 &amp; HTML5 experiment</title>
+	<meta name="description" content="Card flip | SicanStudios.com">
+	<meta name="author" content="https://plus.google.com/116801469202683881648/" />
+	<meta property="og:title" content="Account Menu Dropdown &#8211; CSS3 &amp; HTML5 experiment" /> 
+	<meta property="og:description" content="Demo website showcasing a cool drop-down menu with CSS3." />  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@sican">
+	<meta name="twitter:creator" content="@sican">
+	<meta name="twitter:url" content="http://lab.sicanstudios.com/account_menu/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<nav onmouseover="">
+		<a href="#" title="Menu">Menu</a>
+		<a href="#" title="Account">Account</a>
+		<a href="#" title="Settings">Settings</a>
+		<a href="#" title="Email">Email</a>
+	</nav>
+
+	<article>
+		<h1>Account Menu Dropdown</h1>
+		<p>This is a pure CSS3 demo, no JavaScript required. It should work on all modern browsers, OSs, and mobile devices.</p>
+		<p>On mobile Safari the dropdown might not be hidden on tapping elsewhere, but that&#8217;s OK&mdash;the dropdown is hidden once the user navigates to a link.
+		<p>The icons are basically a font so they should scale nicely, and be retina-ready.</p>
+		<p>Inspired by this <a href="http://dribbble.com/shots/893233-Simple-Account-Menu-Dropdown" target="_blank" title="Simple Account Menu Dropdown on Dribbble">Dribbble shot</a>.</p>
+	</article>
+
+	<footer>
+		Made by <a href="http://twitter.com/sican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a>. <br/>Source code on <a href="http://github.com/sican/lab/tree/gh-pages/account_menu" target="_blank" title="Source code on GitHub">GitHub</a>. <a href="https://twitter.com/share" class="twitter-share-button" data-via="sican" data-related="sican">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</footer>
+
+	<script type="text/javascript">
+    /* iOS re-orientation fix */  
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+      var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
+      if (viewportmeta) {
+        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+
+        document.body.addEventListener('gesturestart', function() {
+          viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+        }, false);
+      }
+
+      /* iOS hides Safari address bar */
+      window.addEventListener("load",function() {
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 300);
+      });
+    }
+	</script>
+</body>
+</html>

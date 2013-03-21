@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20100429 at Mon Jan  7 21:05:22 2013
+ By root
+Copyright (C) 2012 by original authors @ fontello.com
+</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="364" >
+  <font-face 
+    font-family="fontello"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="850"
+    descent="-150"
+    x-height="550"
+    bbox="15 -50 1052 750"
+    underline-thickness="50"
+    underline-position="-100"
+    unicode-range="U+0048-0076"
+  />
+<missing-glyph 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".notdef" 
+d="M33 0v666h265v-666h-265zM66 33h199v600h-199v-600z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="333" 
+ />
+    <glyph glyph-name="H" unicode="H" horiz-adv-x="986" 
+d="M18 360q0 8 16 20l459 370l460 -370q15 -12 15 -20q0 -10 -25 -10h-101v-350q0 -50 -49 -50h-150q-50 0 -50 50v250h-199v-250q0 -50 -51 -50h-150q-50 0 -50 50v350h-100q-25 0 -25 10z" />
+    <glyph glyph-name="M" unicode="M" horiz-adv-x="730" 
+d="M665 400q21 0 35.5 -15t14.5 -35t-15.5 -35t-34.5 -15h-600q-19 0 -34.5 15t-15.5 35t14.5 35t35.5 15h600zM65 500q-19 0 -34.5 15t-15.5 35t14.5 35t35.5 15h600q21 0 35.5 -15t14.5 -35t-15.5 -35t-34.5 -15h-600zM665 200q21 0 35.5 -15t14.5 -35t-15.5 -35
+t-34.5 -15h-600q-19 0 -34.5 15t-15.5 35t14.5 35t35.5 15h600z" />
+    <glyph glyph-name="h" unicode="h" horiz-adv-x="890" 
+d="M805 644q70 -64 70 -156t-70 -158l-360 -330l-360 330q-70 66 -70 158t70 156q61 58 151 58q89 0 153 -58l56 -52l58 52q61 58 150 58q88 0 152 -58z" />
+    <glyph glyph-name="m" unicode="m" horiz-adv-x="1067" 
+d="M15 638q0 1 3 19l339 -290l-338 -325q-4 12 -4 20v576zM60 697q8 3 17 3h913q9 0 18 -3l-340 -291l-67 -54l-67 -55l-67 55l-67 54zM402 330l132 -107l132 107l341 -327q-7 -3 -17 -3h-913q-9 0 -16 3zM711 367l338 290q3 -9 3 -19v-576q0 -10 -3 -20z" />
+    <glyph glyph-name="v" unicode="v" horiz-adv-x="490" 
+d="M475 550l-230 -400l-230 400h460z" />
+  </font>
+</defs></svg>

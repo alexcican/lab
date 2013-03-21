@@ -1,0 +1,301 @@
+/*** GLOBAL ***/
+/**************/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'fontello';
+	src: url('./fonts/fontello.eot');
+	src: url('./fonts/fontello.eot?#iefix') format('embedded-opentype'),
+				url('./fonts/fontello.woff') format('woff'),
+				url('./fonts/fontello.ttf') format('truetype'),
+				url('./fonts/fontello.svg#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'signpainter';
+	src: url('./fonts/signpainter.eot');
+	src: url('./fonts/signpainter.eot?#iefix') format('embedded-opentype'),
+				url('./fonts/signpainter.woff') format('woff'),
+				url('./fonts/signpainter.ttf') format('truetype'),
+				url('./fonts/signpainter.svg#signpainter') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	line-height: 1.6em;
+	background: #fff;
+	color: #555;
+}
+
+::-moz-selection {
+	background: #555;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #555;
+	color: #fff;
+	text-shadow: none;
+}
+
+/* smooth animations */
+a, a:visited, span, input, footer {
+	-moz-transition: color 0.5s, background 0.5s, border 0.5s, opacity 0.5s;
+	-webkit-transition: color 0.5s, background 0.5s, border 0.5s, opacity 0.5s;
+	-o-transition: color 0.5s, background 0.5s, border 0.5s, opacity 0.5s;
+	transition: color 0.5s, background 0.5s, border 0.5s, opacity 0.5s;
+}
+
+a, a:visited, footer:hover a, footer:hover a:visited {
+	color: #2f95c6;
+	text-decoration: none;
+}
+
+a:hover, a:visited:hover, footer a:hover, footer a:visited:hover {
+	color: #555;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* on hover, zoom thumb image */
+a.img:hover img {
+	-moz-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	-o-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+/* smooth animations */
+a.img img {
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* contain the zoomed thumb inside a element */
+a.img, a.img:hover {
+	text-decoration: none;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#container {
+	width: 95%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/*** TYPOGRAPHY ***/
+/******************/
+
+h1 {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: 300;
+}
+
+h2, h3 {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+	line-height: 1.6em;
+	margin-bottom: -0.6em;
+	padding: 1.1em 0 0;
+}
+
+p {
+	padding: 0.35em 0;
+}
+
+ul, ol {
+	padding: 0.9em 0;
+	list-style-type:circle;
+}
+
+ul li, ol li {
+	margin-left: 1.15em;
+	padding-left: 0.4em;
+}
+
+/*** HEADER ***/
+/**************/
+
+
+/*** HOME SLIDES ***/
+/*******************/
+
+/* the div that has the slides */
+#home-slides {
+	font-weight: 100;
+	font-size: 5em;
+	line-height: 1em;
+}
+
+/* */
+#home-slides div {
+	height: 700px;
+	position: relative;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#home-slides p {
+	position: absolute;
+	display: inline;
+	top: 35%;
+	left: 10%;
+	width: 800px;
+	z-index: 4;
+	text-shadow: 0 0 11px rgba(255,255,255,0.6);
+	color: #fff;
+}
+
+#home-slides span {
+	font-size: 1.4em;
+	font-family: 'signpainter', Helvetica, sans-serif;
+	color: #e42186;
+	text-shadow: 0 0 11px rgba(228,153,206,0.6);
+}
+
+#home-slides div:nth-of-type(1) {
+	background: url("../images/large/alex-bg-large.jpg") 50% 0 no-repeat fixed;
+}
+
+/* changes colour of link because of blue bg */
+#home-slides div:nth-of-type(1) a {
+	color: #e42186;
+}
+
+#home-slides div:nth-of-type(2) {
+	background: url("../images/large/bud-bg-large.jpg") 50% 0 no-repeat fixed;
+}
+
+#home-slides div:nth-of-type(3) {
+	background: url("../images/large/par-bg-large.jpg") 50% 0 no-repeat fixed;
+}
+
+#home-slides div:nth-of-type(3) p {
+	color: #111;
+}
+
+/*** CONTENT ***/
+/**************/
+
+
+/*** FOOTER ***/
+/**************/
+
+footer {
+	margin-top: -0.3em;
+	padding-bottom: 1.6em;
+	font-size: 0.875em;
+	line-height: 1.6em;
+	-moz-opacity: 0.3;
+	-webkit-opacity: 0.3;
+	filter:alpha(opacity=30);
+	opacity: 0.3;
+	text-align: center;
+}
+
+footer:hover {
+	-moz-opacity: 1;
+	-webkit-opacity: 1;
+	filter:alpha(opacity=100);
+	opacity: 1;
+}
+
+footer a, footer a:visited {
+	color: #555;
+}
+
+#print {
+	color: #333;
+	display: none;
+}
+
+
+
+/*** ABOVE 768px ***/
+/*******************/
+
+
+@media screen and (min-width: 768px){
+	body {
+		font-size: 1em;
+	}
+
+	#container {
+		max-width: 800px;
+		width: 90%;
+		padding-top: 2.4em;
+	}
+
+	/*** TYPOGRAPHY ***/
+	/******************/
+
+	h1 {
+		font-size: 5.8em;
+		letter-spacing: -0.03em;
+	}
+
+	h2, h3 {
+		font-size: 1.35em;
+		padding: 1.1em 0 0.6em;
+		letter-spacing: -0.05em;
+	}
+
+	/*** HEADER ***/
+	/**************/
+
+
+	/*** CONTENT ***/
+	/***************/
+
+
+
+/*** ABOVE 1024px ***/
+/*******************/
+
+
+@media screen and (min-width: 1024px){
+	h1 {
+		font-size: 5.882em;
+	}
+
+	h2, h3 {
+		font-size: 1.4em;
+		line-height: 1.8em;
+	}
+
+	#container {
+		padding-top: 4.8em;
+	}
+
+	/*** HEADER ***/
+	/**************/
+
+
+	/*** CONTENT ***/
+	/***************/
+
+}

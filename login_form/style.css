@@ -1,0 +1,409 @@
+/* =================================================
+   CREATED (C) BY ALEX CICAN               JUNE 2012
+   HTTP://SICANSTUDIOS.COM
+   ================================================= */
+
+/* ==================================================
+   INSTEAD OF ICONS, LOAD FONT WITH ICONS; 
+   DOWNLOAD WEB-SYMBOLS TYPEFACE: http://is.gd/xI30JF
+   ================================================== */
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url('websymbols-regular-webfont.eot');
+  src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('websymbols-regular-webfont.woff') format('woff'),
+    url('websymbols-regular-webfont.ttf') format('truetype'),
+    url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==================================================
+   PAGE STYLING
+   ================================================== */
+
+body {
+  height: 100%;
+  background: #292929;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6em;
+  text-align: center;
+  padding-top: 8%;
+}
+
+a:link, a:visited {
+  color: #ffb22b;
+  text-decoration: none;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:active {
+  top: 1px;
+  position: relative;
+}
+
+/* moves form down a bit */
+form {
+  margin-top: 2.5em;
+  position: relative;
+}
+
+/* styles the colour of the placeholder (webkit) */
+::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+/* styles the colour of the placeholder (webkit) */
+:-moz-placeholder {
+  color: #aaa;
+}
+
+/* places the white bg and overflow hidden to clip buttons */
+form div {
+  background: #fff;
+  width: 240px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* remove outline from inputs */
+input:focus {
+  outline: none;
+}
+
+/* change colour of font on focus (webkit) */
+input:focus::-webkit-input-placeholder {
+  color: #444;
+}
+
+/* change colour of font on focus (mozilla) */
+input:focus:-moz-placeholder {
+  color: #444;
+}
+
+/* if field is invalid, don’t show red border but make placeholder font red */
+:-moz-ui-invalid, :-moz-ui-invalid>:-moz-placeholder {
+  box-shadow: none;
+  color: #f00;
+}
+
+/* styles both inputs */
+input[type='text'], input[type='password'], input[type='email'] {
+  padding: 8px 0 8px 16px;
+  width: 90px;
+  border: none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* moves password input closer (no space) and adds left border */
+input[type='password'] {
+  margin-left: -5px;
+  border-left: solid 1px #ccc;
+}
+
+/* styles the submit button and overflow hidden (clip arrow) */
+input[type='submit'] {
+  cursor: pointer;
+  width: 240px;
+  height: 60px;
+  padding-bottom: 20px;
+  border: 0;
+  margin-top: 1px;
+  color: #86541a !important;
+  font-weight: bold;
+  font-size: 17px;
+  background: #ffb22b;
+  letter-spacing: 0.05em;
+  -moz-box-shadow: 0 -1px 0 #ffbd4b;
+  -webkit-box-shadow: 0 -1px 0 #ffbd4b;
+  -o-box-shadow: 0 -1px 0 #ffbd4b;
+  box-shadow: 0 -1px 0 #ffbd4b;
+  -webkit-appearance: none;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* on hover effect */
+input[type='submit']:hover, input[type='submit']:focus {
+  background: #ffc55e !important;
+  color: #d38934 !important;
+}
+
+/* on active move button down */
+input[type='submit']:active {
+  margin-top: 10px;
+}
+
+/* removes outline from mozilla on focus */
+input[type='submit']::-moz-focus-inner {
+  border: 0;
+}
+
+/* you can’t place pseudoclass on button */
+form p {
+  position: relative;
+  width: 240px;
+  height: 60px;
+  margin: 15px auto;
+  display: block;
+  overflow: hidden;
+}
+
+/* these act as the background masking (forming the arrow) */
+form p:before, form p:after {
+  content: "";
+  background: #292929;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  top: 26px;
+  left: -54px;
+  -moz-transform: rotate(-65deg);
+  -webkit-transform: rotate(-65deg);
+  -o-transform: rotate(-65deg);
+  transform: rotate(-65deg);
+}
+
+form p:after {
+  left: auto;
+  right: -55px;
+  -moz-transform: rotate(65deg);
+  -webkit-transform: rotate(65deg);
+  -o-transform: rotate(65deg);
+  transform: rotate(65deg);
+}
+
+/* styles both buttons above input fields and rotates them */
+.create_account, .forgot_password {
+  font-size: 11px;
+  background: #323232;
+  text-indent: -9999px;
+  display: block;
+  width: 28px;
+  height: 48px;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+/* on hover or focus (tab), change colour and transition */
+.create_account:hover:after, .create_account:focus:after, .forgot_password:hover:after, .forgot_password:focus:after {
+  color: #fff;
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+/* on link active do nothing and no outline */
+.create_account:active, .forgot_password:active {
+  top: -12px;
+  outline: none !important;
+  position: absolute;
+}
+
+/* positons the link container */
+.forgot_password {
+  position: absolute;
+  right: -12px;
+  left: auto;
+  -moz-transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+/* show respective icon after text is hidden and rotate correctly */
+.create_account:after {
+  font-family: WebSymbolsRegular;
+  content: "U";
+  color: #535353;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  -moz-transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+/* show respective icon after text is hidden and rotate correctly */
+.forgot_password:after {
+  content: "?";
+  font-weight: 900;
+  font-size: 15px;
+  color: #535353;
+  text-indent: 0 !important;
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  -moz-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+footer {
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+/* moves twitter button to appropriate position */
+.twitter-share-button {
+  margin-right: -35px !important;
+}
+
+.logo {
+  border-bottom: none !important;
+  filter: alpha(opacity=5);
+  -moz-opacity: 0.05;
+  -khtml-opacity: 0.05;
+  opacity: 0.05;
+  padding: 15px;
+  display: inline-block;
+}
+
+/* error dialog above the form */
+.error {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  color: #e8302e;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* the window that appears when clicking on menu elements */
+#modal_window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+
+/* the content of window placement and styling (dynamically loaded with JS) */
+#modal_window section {
+  width: 70%;
+  max-width: 350px;
+  height: auto;
+  padding: 20px 20px 40px;
+  margin: 7em auto;
+  display: block;
+  background: #eee;
+  color: #333;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 0px 35px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 0 35px rgba(0,0,0,0.6);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 0 35px rgba(0,0,0,0.6);
+  text-shadow: 0 1px #fff;
+  text-align: center;
+}
+
+/* move form up */
+#modal_window form {
+  margin-top: 1em;
+}
+
+/* small font lighter colour */
+#modal_window small {
+  color: #bbb;
+}
+
+/* bigger width and different bg for inputs */
+#modal_window form input[type='text'], #modal_window form input[type='email'] {
+  width: 180px;
+  background: #e2e2e2;
+}
+
+/* adds separation border */
+#modal_window form input[type='email'] {
+  margin-top: 5px;
+}
+
+/* on focus change background */
+#modal_window form input[type='text']:focus, #modal_window form input[type='email']:focus {
+  background: #d2d2d2;
+}
+
+/* different submit button */
+#modal_window form input[type='submit'] {
+  padding: 0;
+  margin-top: 10px;
+  width: 196px;
+  height: 35px;
+}
+
+footer {
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+footer:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+
+.twitter-share-button {
+  vertical-align: -25%;
+  margin-right: -25px !important;
+}
+
+.logo {
+  border-bottom: none !important;
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  padding: 15px;
+  display: inline-block;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.logo:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}

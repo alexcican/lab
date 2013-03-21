@@ -1,0 +1,355 @@
+/* =================================================
+   CREATED (C) BY ALEX CICAN              APRIL 2012
+   HTTP://SICANSTUDIOS.COM
+   ================================================= */
+/* ==================================================
+   INSTEAD OF ICONS, LOAD FONT WITH ICONS; 
+   DOWNLOAD WEB-SYMBOLS TYPEFACE: http://is.gd/xI30JF
+   ================================================== */
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url('websymbols-regular-webfont.eot');
+  src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('websymbols-regular-webfont.woff') format('woff'),
+    url('websymbols-regular-webfont.ttf') format('truetype'),
+    url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* styling of the card */
+div {
+  width: 376px;
+  height: 520px; /* needs fixed height because contents inside are absolutely positioned */
+  margin: 4% auto 0;
+  text-shadow: 0 -1px 0 #444;
+  position: relative;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: -moz-transform 1.6s;
+  -webkit-transition: -webkit-transform 1.6s;
+  -moz-perspective: 500;
+  -webkit-perspective: 500;
+}
+
+/* lighting from the top (over the image and card). Same for both sides */
+.side:before {
+  content: "";
+  height: 150px;
+  width: 100%;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  position: absolute;
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(255,255,255,0)));
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+  background: -o-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dffffff', endColorstr='#00ffffff',GradientType=0 );
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.8);
+  left: 0;
+}
+
+/* add radius and border at the bottom for profile pic */
+.front img {
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+   border-top-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 2px 0 rgba(255,255,255,0.25);
+}
+
+/* for both sides, position absolute and hide the behind */
+.side {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  background: url('pattern.png') #7a8c94;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: inset 0 0 1px rgba(255,255,255,0.3), inset 0 0 150px rgba(0,0,0,0.2), 0 2px 7px 1px rgba(0,0,0,0.4), 0 0 25px 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 1px rgba(255,255,255,0.3), inset 0 0 150px rgba(0,0,0,0.2), 0 2px 7px 1px rgba(0,0,0,0.4), 0 0 25px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 1px rgba(255,255,255,0.3), inset 0 -60px 70px rgba(0,0,0,0.2), 0 2px 7px 1px rgba(0,0,0,0.4), 0 0 25px 3px rgba(0,0,0,0.3);
+}
+
+/* the button that flips the card (same for both sides) */
+.rotate_button:after {
+  font-family: 'WebSymbolsRegular';
+  content: "h";
+  font-size: 18px;
+  display: block;
+  width: 50%;
+  cursor: pointer;
+  color: #505d65;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.3);
+  margin: 0 auto;
+}
+
+.rotate_button:hover:after {
+  color: #586871 !important;
+}
+
+/* the back of the card, should be flipped */
+.back {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  width: 376px;
+}
+
+/* moves the image down a bit */
+.back img {
+  padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* styles the links on the back of the card */
+.back a {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  border: solid 1px #545f6b;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2), inset 0 -15px 30px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2), inset 0 -15px 30px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2), inset 0 -15px 30px rgba(0,0,0,0.1);
+  width: 333px;
+  margin: 0 auto;
+  padding: 11px 0;
+}
+
+/* on hover add some effects and reduce opacity */
+.back a:hover {
+  -moz-box-shadow: inset 0 15px 30px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2);
+  -webkit-box-shadow: inset 0 15px 30px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: inset 0 15px 30px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 0 rgba(255,255,255,0.2);
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}
+
+/* styles the div that has links half of the width */
+.back .half {
+  width: 336px;
+  margin: 9px auto;
+  height: 39px;
+}
+
+/* links inside this div should have half the width */
+.back .half a {
+  width: 162px;
+  display: inline-block !important;
+}
+
+/* moves the 2nd link to the right (spacing) */
+.back .half a:first-child {
+  margin-right: 4px;
+}
+
+/* links inside this div should have third of the width and no text (images) */
+.back .third a {
+  text-indent: 9999px;
+  display: inline-block !important;
+  width: 106px;
+  margin-right: 3px;
+  background: url('social_networks.png') 10px 5px no-repeat;
+}
+
+/* different social network image */
+.back .third>a:nth-child(2) {
+  background: url('social_networks.png') -108px 5px no-repeat;
+}
+
+/* different social network image */
+.back .third>a:nth-child(3) {
+  margin-right: 0;
+  background: url('social_networks.png') -224px 5px no-repeat;
+}
+
+/* with jQuery adds the class and flips the card */
+.rotated {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Firefox: displays the back side with the front as well. Fixed with opacity change (other browsers affected as well) */
+.front {
+  -moz-transition: all 0.3s;
+  -moz-transition-delay: 0.3s;
+  -webkit-transition: all 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition: all 0.3s;
+  transition-delay: 0.3s;
+}
+
+/* Firefox fix. When rotated, the front shouldn't be displayed on the back */
+.rotated .front {
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+/* =================================================
+   STYLING IS FOR THE PAGE
+   ================================================= */
+
+body {
+  background: url('bg.jpg');
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  border: solid 1px transparent; /* fix bug of logo not being positioned absolute correctly */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* shadow in front of the bg image */
+body:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index:-1;
+  left: 0;
+  top: 0;
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 56%, rgba(0,0,0,0.65) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(56%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 56%,rgba(0,0,0,0.65) 100%);
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 56%,rgba(0,0,0,0.65) 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 56%,rgba(0,0,0,0.65) 100%);
+  background: radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 56%,rgba(0,0,0,0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 );
+}
+
+a:link, a:visited {
+  color: #fff557;
+  text-decoration: none;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:active {
+  top: 1px;
+  position: relative;
+}
+
+h1 {
+  font-size: 32px;
+  position: absolute;
+  margin: -1.55em 0 0.1em;
+  padding: 5px 0;
+  width: 100%;
+  color: #30393f;
+  background: rgba(255,255,255,0.5);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.7);
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 22px;
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+.logo {
+  position: absolute;
+  margin: 2% 0 0 2%;
+  height: 40px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  line-height: 20px;
+  font-size: 11px;
+}
+
+.logo img {
+  -moz-box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+  margin-bottom: -6px;
+}
+
+.logo:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+
+footer {
+  font-weight: bold;
+  line-height: 16px;
+  margin-top: 5%;
+  color: #eee;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+
+footer:hover {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+
+.twitter-share-button {
+  vertical-align: -25%;
+  margin-right: -25px !important;
+}
+
+.logo_footer {
+  border-bottom: none !important;
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+  padding: 15px;
+  display: inline-block;
+}
+
+.logo_footer img {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
