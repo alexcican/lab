@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <title>Complex Navigation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-language" content="en-gb" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id='slider' class='swipe'>
+    <div class='swipe-wrap'>
+      <div>
+        <img src="./images/nav.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/nav_1.png" alt="" />
+      </div>
+      <div>  
+        <img src="./images/nav_2.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/nav_3.png" alt="" />
+      </div>
+      <div>
+        <img src="./images/nav_4.png" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class='buttons'>
+    <button onclick='mySwipe.prev()'>Prev</button> 
+    <button onclick='mySwipe.next()'>Next</button>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="swipe.min.js"></script>
+<script>
+  var elem = document.getElementById('slider');
+  window.mySwipe = Swipe(elem, {
+    speed: 0.001
+  });
+
+  $('body').keydown(function(e) {
+    if (e.keyCode === 37)
+      mySwipe.prev();
+    if (e.keyCode === 39)
+      mySwipe.next();
+  })
+</script>
+</body>
+</html>

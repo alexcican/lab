@@ -1,0 +1,40 @@
+body {
+  margin: 1em 0 0;
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.buttons {
+  position: fixed;
+  top: 0.5em;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  opacity: 0.5;
+}
+
+.buttons:hover {
+  opacity: 1;
+}
+
+.buttons button {
+  padding: 0.5em 2em;
+  cursor: pointer;
+}
