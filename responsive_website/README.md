@@ -1,8 +1,10 @@
-Responsive website
-==================
+## Responsive website
+Create a responsive website with just a few lines of code. Great starting point.
 
-Create a responsive website with just two lines of code. 
+## Demo
+http://lab.sicanstudios.com/responsive_website/
 
-Check out the demo: http://sicanstudios.com/responsive-website
+## License
+https://github.com/sican/lab/blob/gh-pages/README.md
 
-Read the blog post: http://blog.sicanstudios.com/responsive-website
+### http://sicanstudios.com
