@@ -8,6 +8,6 @@ http://lab.sicanstudios.com/set_cookies/
 http://sicanstudios.com/post/set-cookies-javascript/
 
 ## License
-https://github.com/sican/lab/blob/gh-pages/README.md
+https://github.com/alexcican/lab/blob/gh-pages/README.md
 
 ### http://sicanstudios.com

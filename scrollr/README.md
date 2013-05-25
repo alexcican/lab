@@ -5,6 +5,6 @@ A responsive scrolling parallax slideshow script.
 http://lab.sicanstudios.com/scrollr/
 
 ## License
-https://github.com/sican/lab/blob/gh-pages/README.md
+https://github.com/alexcican/lab/blob/gh-pages/README.md
 
 ### http://sicanstudios.com

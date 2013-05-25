@@ -8,6 +8,6 @@ http://lab.sicanstudios.com/hide_show_div/
 http://sicanstudios.com/post/hide-and-show-div/
 
 ## License
-https://github.com/sican/lab/blob/gh-pages/README.md
+https://github.com/alexcican/lab/blob/gh-pages/README.md
 
 ### http://sicanstudios.com
