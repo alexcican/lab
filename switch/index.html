@@ -1,10 +1,10 @@
 <!doctype html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link rel="shortcut icon" href="favicon.png" />
-	<title>Light Switch with CSS3 &amp; HTML5</title>
-	<meta name="description" content="iOS Switch CSS3 | SicanStudios.com">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="favicon.png" />
+  <title>Light Switch with CSS3 &amp; HTML5</title>
+  <meta name="description" content="iOS Switch CSS3 | SicanStudios.com">
   <meta name="author" content="https://plus.google.com/116801469202683881648/" />
   <meta property="og:title" content="Light Switch with CSS3 &amp; HTML5" /> 
   <meta property="og:description" content="Demo website showcasing a skeumorphic realistic light switch." />  
@@ -12,26 +12,26 @@
   <meta name="twitter:site" content="@alexcican">
   <meta name="twitter:creator" content="@alexcican">
   <meta name="twitter:url" content="http://lab.sicanstudios.com/switch/">
-	<meta name="viewport" content="width=device-width, initial-scale=0.55"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.55"/>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-	<button>
-		<span>
-			<b>I</b> <b>O</b>
-		</span>
-	</button>
+  <button>
+    <span>
+      <b>I</b> <b>O</b>
+    </span>
+  </button>
 
-	<footer>
-		<input type="checkbox" id="enabled" checked="checked" /> <label for="enabled">Turn OFF the lights</label><br/>
+  <footer>
+    <input type="checkbox" id="enabled" checked="checked" /> <label for="enabled">Turn OFF the lights</label><br/>
 
-		<a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-related="alexcican">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-related="alexcican">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/switch"target="_blank" title="GitHub">GitHub</a><br/><a href="http://sicanstudios.com" title="SicanStudios" target="_blank" class="logo"><img src="http://sicanstudios.com/images/logo-light.svg" alt="sicanstudios logo" /></a>
-	</footer>
+  </footer>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script type="text/javascript">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript">
     /* iOS re-orientation fix */  
     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
       var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
@@ -43,57 +43,57 @@
         }, false);
       }
 
-			/* iOS hides Safari address bar */
-			window.addEventListener("load",function() {
-				setTimeout(function() {
-					window.scrollTo(0, 1);
-				}, 1000);
-			});
+      /* iOS hides Safari address bar */
+      window.addEventListener("load",function() {
+        setTimeout(function() {
+          window.scrollTo(0, 1);
+        }, 1000);
+      });
     }
 
-		$(document).ready(function(){
-			/* on button click, toggle class "OFF" for the switch */
-			$("button").click(function () {
-				$("button").toggleClass("off");
-			});
+    $(document).ready(function(){
+      /* on button click, toggle class "OFF" for the switch */
+      $("button").click(function () {
+        $("button").toggleClass("off");
+      });
 
-			/* by default, darkness checkbox is checked (ON) but check anyhow */
-			if ($('#enabled').is(':checked')) {
-				darkness();
-			}
+      /* by default, darkness checkbox is checked (ON) but check anyhow */
+      if ($('#enabled').is(':checked')) {
+        darkness();
+      }
 
-			/* on checkbox click, check if checked or not, 
-			call the function to initiate or remove the class of "darkness" if not */
-			$('#enabled').click(function() {
-				if ($('#enabled').is(':checked')) {
-					darkness();
-				} else {
-					$(".dark").remove();
-				}
-			});
-				
-			function darkness() {
-				/* adds a div for the darkness when switch is OFF */
-				$('html').append('<div class="dark"></div>');
+      /* on checkbox click, check if checked or not, 
+      call the function to initiate or remove the class of "darkness" if not */
+      $('#enabled').click(function() {
+        if ($('#enabled').is(':checked')) {
+          darkness();
+        } else {
+          $(".dark").remove();
+        }
+      });
+        
+      function darkness() {
+        /* adds a div for the darkness when switch is OFF */
+        $('html').append('<div class="dark"></div>');
 
-				/* on button click, make darkness */
-				$("button").click(function () {
-					/* avoid bug of inverting the switch i.e. "1" = OFF, "0" = ON;
-					(by disabling the lights, clicking on the switch (OFF), re-enabling the lights and clicking the switch (ON) */
-					if ($("button").hasClass("")) {
-						//do nothing
-					} else {
-						$(".dark").fadeIn(800);
-					}
-				});
+        /* on button click, make darkness */
+        $("button").click(function () {
+          /* avoid bug of inverting the switch i.e. "1" = OFF, "0" = ON;
+          (by disabling the lights, clicking on the switch (OFF), re-enabling the lights and clicking the switch (ON) */
+          if ($("button").hasClass("")) {
+            //do nothing
+          } else {
+            $(".dark").fadeIn(800);
+          }
+        });
 
-				/* wherever on darkness is clicked, bring the light back and move the switch to ON */
-				$(".dark").click(function () {
-					$(".dark").fadeOut(2000);
-					$("button").removeClass();
-				});
-			}
-		});
-	</script>
+        /* wherever on darkness is clicked, bring the light back and move the switch to ON */
+        $(".dark").click(function () {
+          $(".dark").fadeOut(2000);
+          $("button").removeClass();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
