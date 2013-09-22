@@ -336,7 +336,7 @@ nav.expanded #navigation {
 footer {
   margin-top: 5%;
   text-align: center;
-  opacity: .5;
+  opacity: .7;
   -moz-transition: all .4s;
   -webkit-transition: all .4s;
   -o-transition: all .4s;
@@ -348,7 +348,7 @@ footer:hover {
 }
 
 .twitter-share-button {
-  vertical-align: -25%;
+  vertical-align: -15%;
   margin-right: -25px !important;
 }
 
