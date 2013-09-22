@@ -1,0 +1,379 @@
+/* embedded font that has hamburger and x icon */
+@font-face {
+  font-family: 'sicanstudios-demo';
+  src:url('fonts/sicanstudios-demo.eot');
+}
+
+@font-face {
+  font-family: 'sicanstudios-demo';
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAWoAAsAAAAACQwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAAAmUAAAPJ8avxu0ZGVE0AAANwAAAAGgAAABxmU0KwR0RFRgAAA4wAAAAdAAAAIAAxAARPUy8yAAADrAAAAE0AAABgUErdwGNtYXAAAAP8AAAASgAAAVrgexZjaGVhZAAABEgAAAAuAAAANv3pFDtoaGVhAAAEeAAAAB4AAAAkBBD/5GhtdHgAAASYAAAADgAAAA4EAAAgbWF4cAAABKgAAAAGAAAABgAEUABuYW1lAAAEsAAAAOwAAAH16Df8JXBvc3QAAAWcAAAADAAAACAAAwAAeJxlkk1oE1EQx2eT3SSNy1ZDIhbWqtcWIeAHxEPBUMR6sNLsIT2JGsWoSQ9JPWiSoq3xsJ5CvBgQD6KFVCgIpQcJohDwozc923N7qaWHlybNOPNeGoRe/szuezP/37wZDXQdNE0L5dK3bmRz+dlUeiZ3OnU7MwOaBzQYE7ZHHPeKY7prel1THw7CUCKErtsPTL97T7wUecOG6qANcNiG2hEbjtrejyHwco0ADMHIbDZ9KRqNHrA56AugPYerMA06J3vAhBGvabkir3eqouq36iIcGRXOpr/jtA9EFmpt5xPCeP1ZBEFbCiB2E6sUnXtK0aEmAjQXEfc2ywieEyXE3ck/dPCtg9hK/kZsZywplLfyZoElbvCPSu+olfxF17+PceJrLlHoFZNlu2aArZ6waZ7tB6gOdh/SseZDTH2wEGqJMyrC1NIa1UYssBRZSiyNvhS5zgqJE2P4MjvPsR+BYSypGHBvnT5b00l2/kKYD9YQ9Mq27CCOMHG9KDsYlH9Vr+B7P8rwDQRj+RTDb9Bn+LGCB20nRlJvcgdX6BTiLPN9udiXhQA3dJYlzw39pGhqi3te5Z4vGwx/YX8QBE+1Gwqe/B4x/DwznGTnr8T1boMx//Y6IPgGy2dDwZMs86VFun5e58S3XCLOxfgVY68UPFmV2HRC2gckSg+qNrX9H6jklsNRtJTzYr/1nYJaGwlKT3SH/W6qmUsGuQfqUduZa5K2xI9elrRbamMkqFobOajdyXUFSmMcV6ByL2nSQo67tzGSlvak0qfNysiwRDXsRu7/EI7rGw5qzt05c8A1g/8AVu305QAAAHicY2BgYGQAgpOd+YYg+lzKy/0wGgBJ3QeoAAB4nGNgZGBg4ANiCQYQYGJgBEJmIGYB8xgABGsANgAAAHicY2BmYmCcwMDKwMHow5jGwMDgDqW/MkgytDAwMDGwMjPAAKMAAwIEpLmmMDgw5H5gYHzw/wGDHuMDBoUGoBqwQiCDQQEIGQEGMgwuAAAAeJxjYGBgZoBgGQZGBhAIAfIYwXwWBgsgzcXAwcAEhAwMuQwVHxj+/wergrP/T/3fLcAI1QsFjGwMqAK0BkwIJjM97cUDAF10C80AAHicY2BkYGAA4qwPfHnx/DZfGbiZGEDgXMrL/Qj6/wMmBsYHQC4HA1gaAEfUDAUAAHicY2BkYGB88P8Bgx4TAwPDPwYgCRRBAcwAbecD9gAAAgAAAAAAAAACAAAgAAAAAAAAUAAABAAAeJydj7FOwzAQhj+3SQWCpQsbklWxMDhKjITUTix0Y+3AVjVRlaGOlKSvws4T8TC8AL9bi4UBqbZO993df/YdcMsHhngMcx4ST8h4STzF8Zk4k+Y7cc6NuU88Y27epDTZtTKLU1fkCVc8J57yzmviTJqvxDl3Jk88Y2EeGWjZsSWIRo7UijuxEzUcxAztbhuG8Vi33eDq5qDUb+0croVB7dH37FW0eApK+ZXs/0/OOq/rWMq8eiue9HQXxnXX7xvri9Ku7J9hlPPeLZ0vK8kvW2ejWn/qjXtY/RxnZ9P0Q9sFWxXlhS//AEv5VgZ4nGNgZsALAAB9AAQ=) format('woff'),
+     url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'sicanstudios-demo';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.8em;
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  background: #ecf0f1;
+  font-size: .75em;
+  padding-top: 54px;
+}
+
+/* when navigation is shown, don’t allow scrolling of content */
+body.no_scroll {
+  overflow: hidden;
+}
+
+/* Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right */
+@-moz-document url-prefix() {
+  body.no_scroll {
+    margin-right: 23px;
+  }
+
+  body.no_scroll .expanded {
+    padding-right: 7px;
+    background: rgba(255,255,255,.98); /* because FF no blur, reduce bg transparency */
+  }
+}
+
+a:link, a:visited {
+  color: #2ecc71;
+  text-decoration: none;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.massiveHeading {
+  font-size: 6em;
+  text-align: center;
+  margin: 15% 0;
+}
+
+#content, footer {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+
+
+/* === TOP MENU LAYOUT === */
+/* ======================= */
+
+nav {
+  color: #333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 46px;
+  padding-top: 8px;
+  right: 0;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
+  -moz-transition: -moz-transform .4s, height .3s, background .4s;
+  transition: transform .4s, height .3s, background .4s;
+  -webkit-animation: firstFadeInAndDrop .5s;
+  -moz-animation: firstFadeInAndDrop .5s;
+  -ms-animation: firstFadeInAndDrop .5s;
+  animation: firstFadeInAndDrop .5s;
+}
+
+/* on intial load fade in the menu */
+@-webkit-keyframes firstFadeInAndDrop {
+  0%   {-webkit-transform: translate(0,-54px);}
+  100% {-webkit-transform: translate(0,0);}
+}
+
+@-moz-keyframes firstFadeInAndDrop {
+  0%   {-moz-transform: translate(0,-54px);}
+  100% {-moz-transform: translate(0,0);}
+}
+
+@-ms-keyframes firstFadeInAndDrop {
+  0%   {-ms-transform: translate(0,-54px);}
+  100% {-ms-transform: translate(0,0);}
+}
+
+@keyframes firstFadeInAndDrop {
+  0%   {transform: translate(0,-54px);}
+  100% {transform: translate(0,0);}
+}
+
+/* on navigation hover add slight white bg */
+nav:hover {
+  background: rgba(255,255,255,.7);
+}
+
+/* limits width of menu to site width */
+.site-width {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+/* name of site in main menu (not user selectable) */
+.site-width>a {
+  font-weight: bold;
+  color: #555;
+  line-height: 1.9em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* when hidden it goes up */
+nav.invisible {
+  -webkit-transform: translate(0,-64px);
+  -moz-transform: translate(0,-64px);
+  -ms-transform: translate(0,-64px);
+  -o-transform: translate(0,-64px);
+  transform: translate(0,-64px);
+  -webkit-transition: -webkit-transform .2s;
+  -moz-transition: -moz-transform .2s;
+  -o-transition: -o-transform .2s;
+  transition: transform .2s;
+}
+
+/* when shown & detached position is fixed */
+nav.detached {
+  position: fixed;
+  background: rgba(255,255,255,.9);
+  -webkit-transition: -webkit-transform .3s, height .3s, background .4s;
+  -moz-transition: -moz-transform .3s, height .3s, background .4s;
+  -o-transition: -o-transform .3s, height .3s, background .4s;
+  transition: transform .3s, height .3s, background .4s;
+}
+
+
+
+/* === MENU NAVIGATION === */
+/* ======================= */
+
+/* increases menu width & height */
+nav.expanded {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  cursor: default;
+  background: rgba(255,255,255,.85);
+}
+
+/* positions navigation content */
+#navigation {
+  -webkit-transform: translate(0,-700px);
+  -moz-transform: translate(0,-700px);
+  -ms-transform: translate(0,-700px);
+  -o-transform: translate(0,-700px);
+  transform: translate(0,-700px);
+  opacity: 0;
+  padding-top: 2em;
+  text-align: center;
+  -webkit-transition: -webkit-transform .15s, opacity .7s;
+  -moz-transition: -moz-transform .15s, opacity .7s;
+  -o-transition: -o-transform .15s, opacity .7s;
+  transition: transform .15s, opacity .7s;
+}
+
+/* shows navigation */
+nav.expanded #navigation {
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+
+
+/* === MENU NAVIGATION CONTENT === */
+/* =============================== */
+
+/* adds vertical spacing between menu links */
+#navigation ul li {
+  padding: 1em 0;
+}
+
+/* makes link font bigger */
+#navigation ul a {
+  font-size: 3.3em;
+  font-weight: bold;
+  padding: 0 15%;
+}
+
+/* subheading span styling */
+#navigation ul span {
+  font-family: Georgia, serif;
+  font-size: .75em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #666;
+  display: block;
+}
+
+
+
+/* === MENU ICONS === */
+/* ================== */
+
+/* adds padding to icons */
+.icon {
+  padding: 2% 3%;
+  margin: -2% -3%; /* center icon in vertical middle of top menu */
+  cursor: pointer;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* hides extra text of icon (accessibility) */
+.icon span {
+  display: none;
+}
+
+/* on focus, don’t show outline */
+.icon:focus {
+  outline: none;
+}
+
+/* icon colour */
+.icon:before, .icon:active:before {
+  color: #2ecc71;
+}
+
+/* changes colour on hover or keyboard focus */
+.icon:hover:before, .icon:focus:before {
+  color: #555;
+}
+
+/* changes icon to an “X” */
+.expanded .icon:before {
+  content: 'x';
+  font-size: 1.4em;
+  line-height: 1.4em;
+  padding-right: .15em;
+}
+
+
+
+/* === CONTENT BLURRING === */
+/* ======================== */
+
+/* adds transition to the content */
+#container {
+  -webkit-transition: -webkit-transform .2s, filter .2s;
+  -moz-transition: -moz-transform .2s, filter .2s;
+  -o-transition: -o-transform .2s, filter .2s;
+  transition: transform .2s, filter .2s;
+}
+
+/* blurring content */
+.blurred {
+  -webkit-transform: scale(.99);
+  -moz-transform: scale(.99);
+  -o-transform: scale(.99);
+  transform: scale(.99);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition: -webkit-transform .5s, -webkit-filter .5s;
+  -moz-transition: -moz-transform .5s, -moz-filter .5s;
+  -o-transition: -o-transform .5s, -o-filter .5s;
+  transition: transform .5s, filter .5s;
+}
+
+
+
+/* === FOOTER === */
+/* ============== */
+
+footer {
+  margin-top: 5%;
+  text-align: center;
+  opacity: .5;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+.twitter-share-button {
+  vertical-align: -25%;
+  margin-right: -25px !important;
+}
+
+.logo {
+  border-bottom: none !important;
+  opacity: .2;
+  padding: 15px;
+  display: inline-block;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+
+
+/* === ABOVE 768PX === */
+/* =================== */
+
+@media screen and (min-width: 768px){
+  body {
+    font-size: 1.125em;
+  }
+}
