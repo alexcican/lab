@@ -165,16 +165,17 @@ nav.invisible {
   -moz-transition: -moz-transform .2s;
   -o-transition: -o-transform .2s;
   transition: transform .2s;
+  opacity: 0;
 }
 
 /* when shown & detached position is fixed */
 nav.detached {
   position: fixed;
   background: rgba(255,255,255,.9);
-  -webkit-transition: -webkit-transform .3s, height .3s, background .4s;
-  -moz-transition: -moz-transform .3s, height .3s, background .4s;
-  -o-transition: -o-transform .3s, height .3s, background .4s;
-  transition: transform .3s, height .3s, background .4s;
+  -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
+  -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
+  -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
+  transition: transform .3s, height .3s, background .4s, opacity .3s;
 }
 
 
