@@ -77,7 +77,7 @@
         hideShowOffset = 6; // scrolling value after which triggers hide/show menu
 
     // on scroll hide/show menu
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       if ($('nav').hasClass('expanded')) {
         // do nothing; main navigation is being shown
       } else {
@@ -118,17 +118,17 @@
       }
     })
 
-    // hides main menu popover if class "expanded"
+    // shows/hides navigation’s popover if class "expanded"
     $('nav').click(function() {
       showHideNav();
     })
 
-    // clicking anywhere inside navigation or heading won’t close main menu popover
+    // clicking anywhere inside navigation or heading won’t close navigation’s popover
     $('#navigation').click(function(event){
         event.stopPropagation();
     })
 
-    // checks if navigation is enabled
+    // checks if navigation’s popover is shown
     function showHideNav() {
       if ($('nav').hasClass('expanded')) {
         hideNav();
@@ -137,7 +137,7 @@
       }
     }
 
-    // shows the main menu popover
+    // shows the navigation’s popover
     function showNav() {
       $('nav').removeClass('invisible').addClass('expanded');
       $('#container').addClass('blurred');
@@ -145,13 +145,13 @@
       $('#navigation a').attr('tabindex', ''); // links inside navigation should be TAB selectable
     }
 
-    // hides the main menu popover
+    // hides the navigation’s popover
     function hideNav() {
       $('#container').removeClass('blurred');
-      window.setTimeout(function(){$('body').removeClass();}, 10); // Allow animations to start before removing class (Firefox)
+      window.setTimeout(function(){$('body').removeClass();}, 10); // allow animations to start before removing class (Firefox)
       $('nav').removeClass('expanded');
       $('#navigation a').attr('tabindex', '-1'); // links inside hidden navigation should not be TAB selectable
-      $('.icon').blur();
+      $('.icon').blur(); // deselect icon when navigation is hidden
     }
 
     // keyboard shortcuts
