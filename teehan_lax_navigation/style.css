@@ -46,11 +46,11 @@ body.no_scroll {
 /* Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right */
 @-moz-document url-prefix() {
   body.no_scroll {
-    margin-right: 23px;
+    /*margin-right: 23px;*/
   }
 
   body.no_scroll .expanded {
-    padding-right: 7px;
+    /*padding-right: 7px;*/
     background: rgba(255,255,255,.98); /* because FF no blur, reduce bg transparency */
   }
 }
