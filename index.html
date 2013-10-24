@@ -1,106 +1,143 @@
 <!doctype html>
+<html lang="en-gb">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta http-equiv="content-language" content="en-gb" />
-  <link rel="shortcut icon" href="http://sicanstudios.com/images/favicon.ico" />
-  <title>Lab - Sicanstudios</title>
-  <meta name="description" content="Demos &amp; HTML5 + CSS3 Experiments">
-  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:100,400,600' rel='stylesheet' type='text/css'>
+  <title>Lab of Alex Cican</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Demos &amp; HTML5 + CSS3 code experiments">
+  <meta name="viewport" content="width=device-width" />
+  <link rel="shortcut icon" href="http://alexcican.com/images/favicon.ico" type="image/x-icon" />
+  <link rel="author" href="https://plus.google.com/116801469202683881648/" />
+  <link rel="stylesheet" type="text/css" href="http://alexcican.com/style/style.min.css" />
+  <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" href="http://alexcican.com/style/ie9.css" />
+  <![endif]-->
   <meta property="og:image" content="http://dribbble.s3.amazonaws.com/users/27913/screenshots/527584/card_flip.jpg" />
   <meta property="og:title" content="Demos &amp; HTML5 + CSS3 Experiments" />
-  <meta property="og:description" content="Demos &amp; HTML5 + CSS3 Experiments of Alex Cican." />
+  <meta property="og:description" content="Demos &amp; HTML5 + CSS3 code experiments of Alex Cican." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@alexcican" />
   <meta name="twitter:creator" content="@alexcican" />
-  <meta name="twitter:url" content="http://lab.sicanstudios.com/" />
-  <meta name="viewport" content="width=device-width" />
-  <style>
-    body {
-      margin: 1.6em auto;
-      font: 1.6em/150% "Open Sans", Helvetica, sans-serif;
-      width: 90%;
-      max-width: 700px;
-      color: #666;
-    }
-
-    a, a:visited {
-      color: #cc9900;
-      text-decoration: none;
-      -moz-transition: color .666s;
-      -webkit-transition: color .666s;
-      -o-transition: color .666s;
-      transition: color .666s;
-    }
-
-    a:visited {
-      color: #999;
-    }
-
-    a:hover, footer:hover a:hover {
-      color: #333;
-      background: #fafafa;
-    }
-
-    h1 {
-      font-size: 3em;
-      font-weight: 100;
-    }
-
-    section {
-      margin: 1.6em 0;
-    }
-
-    section a {
-      padding: .8em 0;
-      display: block;
-    }
-
-    footer {
-      font-size: 0.875em;
-      opacity: .5;
-      -moz-transition: opacity .666s;
-      -webkit-transition: opacity .666s;
-      -o-transition: opacity .666s;
-      transition: opacity .666s;
-    }
-
-    footer:hover {
-      opacity: 1;
-    }
-
-    footer:hover a {
-      color: #cc9900;
-    }
-
-    .twitter-share-button {
-      vertical-align: -9%;
-      margin-right: -30px !important;
-    }
-  </style>
+  <meta name="twitter:url" content="http://lab.alexcican.com/" />
 </head>
 <body>
-  <section>
-    <h1>Lab</h1>
-    <a href="http://lab.sicanstudios.com/teehan_lax_navigation" target="_blank">Teehan+Lax navigation</a>
-    <a href="http://job.sicanstudios.com/airbnb/profile.html" target="_blank">Airbnb profiles redesign</a>
-    <a href="http://lab.sicanstudios.com/responsive_website/" target="_blank">A simple responsive website</a>
-    <a href="http://lab.sicanstudios.com/scrollr/" target="_blank">Responsive Parallax</a>
-    <a href="http://lab.sicanstudios.com/account_menu/" target="_blank">Account Menu Dropdown</a>
-    <a href="http://lab.sicanstudios.com/login_form/" target="_blank">Login form</a>
-    <a href="http://lab.sicanstudios.com/switch/" target="_blank">Light Switch</a>
-    <a href="http://lab.sicanstudios.com/card_flip/" target="_blank">Card Flip</a>
-    <a href="http://lab.sicanstudios.com/twitter_button/" target="_blank">Twitter Button</a>
-    <a href="http://lab.sicanstudios.com/set_cookies/" target="_blank">How to set cookies with JavaScript</a>
-    <a href="http://lab.sicanstudios.com/hide_show_div/" target="_blank">How to hide and show a DIV</a>
-  </section>
-  <footer>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-size="large" data-related="alexcican">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://sicanstudios.com" target="_blank" title="Sicanstudios">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/" target="_blank" title="GitHub">GitHub</a>
-  </footer>
+  <nav id="mainNav">
+    <span class="menuIcon icon" title="Menu (Esc)" tabindex="0" data-icon="m"><span>Menu</span></span>
 
-  <!--script>
+    <div id="navigation">
+      <p><span class="heading">alex cican</span><br/><span class="subheading">Product Designer</span></p>
+      <p class="menu_label">Menu</p>
+
+      <section>
+        <ul class="siteLinks">
+          <li><span>Site dishes</span></li>
+          <li><a href="http://alexcican.com" class="home" title="Learn about me (H)">Home</a></li>
+          <li><a href="http://alexcican.com/work/" class="work" title="Check out my work (W)">Work</a></li>
+          <li><a href="http://lab.alexcican.com" class="lab current" title="Visit my lab (L)">Lab</a></li>
+          <li><a href="http://alexcican.com/blog/" class="blog" title="Read my blog (B)">Blog</a></li>
+          <li><a href="http://alexcican.com/photos/" class="photos" title="View my photos (P)">Photos</a></li>
+        </ul>
+
+        <ul>
+          <li><span>Main contact</span></li>
+          <li><a href="mailto:&#097;&#108;&#101;&#120;&#064;&#097;&#108;&#101;&#120;&#099;&#105;&#099;&#097;&#110;&#046;&#099;&#111;&#109;" class="email" title="Email me (E)">Email</a></li>
+          <li><a href="skype:alex.cican?chat" class="skype" title="Skype me (S)">Skype</a></li>
+        </ul>
+
+        <ul>
+          <li><span>Desserts</span></li>
+          <li><a href="http://twitter.com/alexcican" title="Find me on Twitter" target="_blank">Twitter</a></li>
+          <li><a href="http://dribbble.com/alexcican" title="Find me on Dribbble" target="_blank">Dribbble</a></li>
+          <li><a href="http://facebook.com/alexcican" title="Find me on Facebook" target="_blank">Facebook</a></li>
+          <li><a href="http://github.com/alexcican" title="Find me on GitHub" target="_blank">GitHub</a></li>
+          <li><a href="http://flickr.com/sican" title="Find me on Flickr" target="_blank">Flickr</a></li>
+          <li><a href="http://vimeo.com/alexcican" title="Find me on Vimeo" target="_blank">Vimeo</a></li>
+          <li><a href="http://instagram.com/alexcican" title="Find me on Instagram" target="_blank">Instagram</a></li>
+          <li><a href="http://youtube.com/sican" title="Find me on YouTube" target="_blank">YouTube</a></li>
+          <li><a href="http://be.net/alexcican" title="Find me on Behance" target="_blank">Behance</a></li>
+        </ul>
+
+        <p>Some of our dishes may contain sarcasm and humour. <br/>Please don&rsquo;t inform our staff about any allergies you might have.</p>
+      </section>
+    </div>
+  </nav>
+
+  <div id="container">
+    <div id="fullWidthContainer" class="notScrolling animateOnFirstLoad">
+      <section class="blue">
+        <a href="http://lab.alexcican.com/teehan_lax_navigation" target="_blank">
+          <h2>Teehan+Lax navigation</h2>
+        </a>
+      </section>
+
+      <section class="red">
+        <a href="http://job.alexcican.com/airbnb/profile.html" target="_blank">
+          <h2>Airbnb profiles redesign</h2>
+        </a>
+      </section>
+
+      <section class="light_blue">
+        <a href="http://lab.alexcican.com/scrollr" target="_blank">
+          <h2>Responsive Parallax</h2>
+        </a>
+      </section>
+
+      <section class="green">
+        <a href="http://lab.alexcican.com/account_menu" target="_blank">
+          <h2>Account menu dropdown</h2>
+        </a>
+      </section>
+
+      <section class="pink">
+        <a href="http://lab.alexcican.com/login_form" target="_blank">
+          <h2>Login form</h2>
+        </a>
+      </section>
+
+      <section class="yellow">
+        <a href="http://lab.alexcican.com/switch" target="_blank">
+          <h2>Skeuomorphic light switch</h2>
+        </a>
+      </section>
+
+      <section class="orange">
+        <a href="http://lab.alexcican.com/card_flip" target="_blank">
+          <h2>Profile card flip</h2>
+        </a>
+      </section>
+      <section class="grey">
+        <a href="http://lab.alexcican.com/twitter_button" target="_blank">
+          <h2>Skeuomorphic Twitter button</h2>
+        </a>
+      </section>
+
+      <section class="light_mauve">
+        <a href="http://lab.alexcican.com/set_cookies" target="_blank">
+          <h2>How to set cookies with JavaScript</h2>
+        </a>
+      </section>
+
+      <section class="brown">
+        <a href="http://lab.alexcican.com/hide_show_div" target="_blank">
+          <h2>How to hide and show a DIV</h2>
+        </a>
+      </section>
+    </div>
+
+    <footer style="text-align: center">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-size="large" data-related="alexcican">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://alexcican.com" target="_blank" title="Alex Cican">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/" target="_blank" title="GitHub">GitHub</a>
+    </footer>
+  </div>
+
+  <!-- Load jQuery script -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+  <!-- Load main JS file -->
+  <script src="http://alexcican.com/javascript/basic.min.js"></script>
+
+  <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-6273751-7']);
     _gaq.push(['_trackPageview']);
@@ -110,6 +147,6 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script-->
+  </script>
 </body>
 </html>
