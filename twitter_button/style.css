@@ -4,7 +4,7 @@
    ================================================= */
 
 /* ==================================================
-   INSTEAD OF ICONS, LOAD FONT WITH ICONS; 
+   INSTEAD OF ICONS, LOAD FONT WITH ICONS;
    DOWNLOAD WEB-SYMBOLS TYPEFACE: http://is.gd/xI30JF
    ================================================== */
 @font-face {
@@ -19,7 +19,7 @@
 }
 
 /* =================================================
-   REMOVE TRANSITION AT THE END OF THIS CSS PROPERTY 
+   REMOVE TRANSITION AT THE END OF THIS CSS PROPERTY
    IF YOU DON'T WANT DELAY/SMOOTHENING OF THE BUTTON
    ================================================= */
 
@@ -50,7 +50,7 @@ button {
   -webkit-border-radius: 250px;
   border-radius: 250px;
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* on tap (iphone/ipad) don't grey button */
-  
+
   /* transitions */
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -141,7 +141,7 @@ a:active {
 }
 
 .twitter-share-button {
-  vertical-align: -25%;
+  vertical-align: -15%;
   margin-right: -25px !important;
 }
 

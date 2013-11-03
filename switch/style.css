@@ -29,6 +29,7 @@ button {
   -webkit-border-radius: 60px;
   border-radius: 60px;
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* on tap (iphone/ipad) don't grey button */
+  outline: none;
 }
 
 /* hides the dotted border around the switch (Firefox) */
@@ -67,7 +68,7 @@ button:before, button:after, button span:before, button span:after {
 /* right-top screw position */
 button:after {
   left: auto;
-  right: 30px;  
+  right: 30px;
 }
 
 /* left-bottom screw position */
@@ -294,7 +295,7 @@ footer label {
 }
 
 .twitter-share-button {
-  vertical-align: -25%;
+  vertical-align: -15%;
   margin-right: -25px !important;
 }
 

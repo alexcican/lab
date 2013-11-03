@@ -12,9 +12,9 @@ The navigation bar is being hidden once you start scrolling. As soon as you scro
 * iOS 7 like blurring of background.
 
 ## Demo
-http://lab.sicanstudios.com/teehan_lax_navigation
+http://lab.alexcican.com/teehan_lax_navigation
 
 ## License
 https://github.com/alexcican/lab/blob/gh-pages/README.md
 
-### http://sicanstudios.com
+### http://alexcican.com

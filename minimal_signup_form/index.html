@@ -1,0 +1,104 @@
+<!doctype html>
+
+<head>
+  <title>Minimal sign up form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="author" content="https://plus.google.com/116801469202683881648/" />
+  <meta property="og:title" content="Minimal Sign up form" />
+  <meta property="og:description" content="Minimal Sign up form - CSS3 &amp; HTML5 Demo" />
+  <meta property="og:image" content="http://lab.alexcican.com/minimal_signup_form/cover.png" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@alexcican">
+  <meta name="twitter:creator" content="@alexcican">
+  <meta name="twitter:url" content="http://lab.alexcican.com/minimal_signup_form/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="style.min.css" />
+</head>
+<body>
+  <form action="about.html" method="post">
+    <h1>Sign up</h1><br/>
+
+    <span class="input"></span>
+    <input type="text" name="name" placeholder="Full name" title="Format: Xx[space]Xx (e.g. Alex Cican)" autofocus autocomplete="off" required pattern="^[a-zA-Z0-9]+([ ][a-zA-Z0-9]+)?$" />
+    <span class="input"></span>
+    <input type="email" name="email" placeholder="Email address" required />
+    <span id="passwordMeter"></span>
+    <input type="password" name="password" id="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+
+    <button type="submit" value="Sign Up" title="Submit form" class="icon-arrow-right"><span>Sign up</span></button>
+  </form>
+
+  <footer><a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-related="alexcican">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/minimal_signup_form" target="_blank" title="GitHub">GitHub</a>
+  </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+  <!-- checks if browser supports HTML5 attributes for input fields -->
+  <script src="modernizr.min.js"></script>
+  <script>
+    // Tests with Modernizr if supports HTML5 placeholder="" attribute. If old browser, load necessary JS files and run them
+    if (!Modernizr.input.placeholder) {
+      Modernizr.load({
+        load: [
+          'placeholder.min.js',
+          'formRequired.min.js'
+        ],
+        complete : function(){
+          $('input').placeholder();
+          $('form').h5Validate();
+        }
+      })
+    }
+
+    // check password strength on key up
+    $('#password').keyup(function() {
+      var pass = $(this).val();
+      var cacheResult = checkPassStrength(pass);
+    })
+
+    // on blur makes passwordMeter border same colour as not focused
+    $('#password').blur(function() {
+      $('#passwordMeter').addClass('blur');
+    })
+
+    // on focus removes class that makes passwordMeter border same colour as not focused
+    $('#password').focus(function() {
+      if ($('#passwordMeter').hasClass('blur'))
+        $('#passwordMeter').removeClass('blur');
+    })
+
+    // rates user's password
+    function scorePassword(pass) {
+      var i = pass.length,
+          score = 0;
+      if (i >= 7) {
+        score += /[a-z]/.test(pass) ? 3 : 0;
+        score += /[A-Z]/.test(pass) ? 4 : 0;
+        score += /\d/.test(pass) ? 1 : 0;
+        score += /[^\w\d\s]/.test(pass) ? 1 : 0;
+      }
+      if (i >= 22 && score >= 9)
+        score += 1;
+
+      return score;
+    }
+
+    // adds classes depending on score
+    function checkPassStrength(pass) {
+      var score = scorePassword(pass);
+      console.log(score);
+      if (score < 1)
+        $('#password, #passwordMeter').removeClass().addClass('weak');
+      if (score >= 7)
+        $('#password, #passwordMeter').removeClass().addClass('good');
+      if (score >= 8)
+        $('#password, #passwordMeter').removeClass().addClass('better');
+      if (score >= 9)
+        $('#password, #passwordMeter').removeClass().addClass('strong');
+      if (score >= 10)
+        $('#password, #passwordMeter').removeClass().addClass('military');
+    }
+  </script>
+</body>
+</html>

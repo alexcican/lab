@@ -4,14 +4,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="shortcut icon" href="favicon.png" />
   <title>Light Switch with CSS3 &amp; HTML5</title>
-  <meta name="description" content="iOS Switch CSS3 | SicanStudios.com">
+  <meta name="description" content="iOS Switch CSS3">
   <meta name="author" content="https://plus.google.com/116801469202683881648/" />
-  <meta property="og:title" content="Light Switch with CSS3 &amp; HTML5" /> 
-  <meta property="og:description" content="Demo website showcasing a skeumorphic realistic light switch." />  
+  <meta property="og:title" content="Light Switch with CSS3 &amp; HTML5" />
+  <meta property="og:description" content="Demo website showcasing a skeumorphic realistic light switch." />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@alexcican">
   <meta name="twitter:creator" content="@alexcican">
-  <meta name="twitter:url" content="http://lab.sicanstudios.com/switch/">
+  <meta name="twitter:url" content="http://lab.alexcican.com/switch/">
   <meta name="viewport" content="width=device-width, initial-scale=0.55"/>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -27,12 +27,12 @@
     <input type="checkbox" id="enabled" checked="checked" /> <label for="enabled">Turn OFF the lights</label><br/>
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-related="alexcican">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/switch"target="_blank" title="GitHub">GitHub</a><br/><a href="http://sicanstudios.com" title="SicanStudios" target="_blank" class="logo"><img src="http://sicanstudios.com/images/logo-light.svg" alt="sicanstudios logo" /></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/switch"target="_blank" title="GitHub">GitHub</a>
   </footer>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script type="text/javascript">
-    /* iOS re-orientation fix */  
+    /* iOS re-orientation fix */
     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
       var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
       if (viewportmeta) {
@@ -62,7 +62,7 @@
         darkness();
       }
 
-      /* on checkbox click, check if checked or not, 
+      /* on checkbox click, check if checked or not,
       call the function to initiate or remove the class of "darkness" if not */
       $('#enabled').click(function() {
         if ($('#enabled').is(':checked')) {
@@ -71,7 +71,7 @@
           $(".dark").remove();
         }
       });
-        
+
       function darkness() {
         /* adds a div for the darkness when switch is OFF */
         $('html').append('<div class="dark"></div>');

@@ -30,13 +30,13 @@ a:active {
   position: relative;
   margin: 210px auto 0;
 }
-#container_2 { 
+#container_2 {
   margin-top: 20px
 }
 p.info {
   margin-bottom: 50px;
 }
-p.info span { 
+p.info span {
   color: #333;
 }
 .subscribe {
@@ -93,7 +93,7 @@ form input[type=submit] {
   border: solid 1px #777;
   margin: 0 auto 10px;
   padding: 10px;
-  cursor: pointer 
+  cursor: pointer
 }
 .text_container div p {
   cursor: default !important;
@@ -119,7 +119,7 @@ footer {
   text-align: center;
 }
 .twitter-share-button {
-  vertical-align: -25%;
+  vertical-align: -15%;
   margin-right: -25px !important;
 }
 .logo {

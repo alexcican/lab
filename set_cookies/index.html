@@ -6,12 +6,12 @@
   <title>How to set cookies with JavaScript Demo</title>
   <meta name="description" content="How to set cookies with JavaScript Demo">
   <meta name="author" content="https://plus.google.com/116801469202683881648/" />
-  <meta property="og:title" content="How to set cookies with JavaScript Demo" /> 
-  <meta property="og:description" content="Demo website showing you how to set cookies with JavaScript." />  
+  <meta property="og:title" content="How to set cookies with JavaScript Demo" />
+  <meta property="og:description" content="Demo website showing you how to set cookies with JavaScript." />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@alexcican">
   <meta name="twitter:creator" content="@alexcican">
-  <meta name="twitter:url" content="http://lab.sicanstudios.com/set_cookies/">
+  <meta name="twitter:url" content="http://lab.alexcican.com/set_cookies/">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -32,7 +32,7 @@
     <div class="reset">To restart, click here to <a href="">remove cookies</a>.</div>
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="alexcican" data-related="alexcican">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/set_cookies" target="_blank" title="GitHub">GitHub</a><br/><a href="http://sicanstudios.com" title="SicanStudios" target="_blank" class="logo"><img src="http://sicanstudios.com/images/logo-dark.svg" alt="sicanstudios logo" /></a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> &bull; Created by <a href="http://twitter.com/alexcican" target="_blank" title="Alex Cican on Twitter">Alex Cican</a> &bull; Source code on <a href="http://github.com/alexcican/lab/tree/gh-pages/set_cookies" target="_blank" title="GitHub">GitHub</a>
   </footer>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -53,10 +53,10 @@
           $(this).addClass('clicked'); //add class that the link is clicked and shot the footer with delay
           $('.message_click h2').delay(200).fadeOut(1300)
           .queue(function(n) { //after the message fades-out, display the other message
-            $('.message_click h3').css("display", "block"); 
+            $('.message_click h3').css("display", "block");
             n();
           });
-          
+
           $.cookie('welcome2', 'clicked', {expires: 7 }); //add cookie setting that user has clicked
         }
         return false;
