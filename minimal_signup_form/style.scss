@@ -201,6 +201,17 @@ input:focus::-ms-input-placeholder {
   color: #ddd;
 }
 
+// error fields for Safari and other unsupportive browsers
+.error {
+  border-color: #E35F5F;
+  color: #E35F5F;
+}
+
+// moves down because of the errors
+.error+button {
+  margin-bottom: 2em;
+}
+
 // right rectangle that hides right border line
 #passwordMeter:before {
   content: '';

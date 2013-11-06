@@ -183,6 +183,13 @@ input:focus::-moz-input-placeholder {
 input:focus::-ms-input-placeholder {
   color: #ddd; }
 
+.error {
+  border-color: #E35F5F;
+  color: #E35F5F; }
+
+.error + button {
+  margin-bottom: 2em; }
+
 #passwordMeter:before {
   content: '';
   height: 1px;

@@ -42,14 +42,36 @@
       Modernizr.load({
         load: [
           'placeholder.min.js',
-          'formRequired.min.js'
         ],
-        complete : function(){
+        complete: function(){
           $('input').placeholder();
-          $('form').h5Validate();
         }
       })
     }
+
+    // Tests with Modernizr if supports HTML5 formvalidation
+    if (!Modernizr.formvalidation) {
+      Modernizr.load({
+        load: [
+          'jquery.validate.min.js'
+        ],
+        complete: function(){
+          // parse through each required input
+          $('form').find('input[required]').each(function () {
+            // add a class to each required field with "required" & the input type
+            // using the normal "getAttribute" method because jQuery's attr always returns "text"
+            $(this).attr('class', 'required ' + this.getAttribute('type')).removeAttr('required');
+          });
+
+          // call jQuery validate plugin on each form
+          $('form').each(function () {
+            $(this).validate();
+          });
+        }
+      })
+    }
+
+
 
     // check password strength on key up
     $('#password').keyup(function() {
@@ -67,6 +89,8 @@
       if ($('#passwordMeter').hasClass('blur'))
         $('#passwordMeter').removeClass('blur');
     })
+
+
 
     // rates user's password
     function scorePassword(pass) {
