@@ -37,6 +37,12 @@
   <!-- checks if browser supports HTML5 attributes for input fields -->
   <script src="modernizr.min.js"></script>
   <script>
+    // for form validation
+    var unsupportedBrowsers = false;
+    if ((navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) || (navigator.userAgent.match(/MSIE\s(?!10)/))) {
+      unsupportedBrowsers = true;
+    }
+
     // Tests with Modernizr if supports HTML5 placeholder="" attribute. If old browser, load necessary JS files and run them
     if (!Modernizr.input.placeholder) {
       Modernizr.load({
@@ -49,8 +55,8 @@
       })
     }
 
-    // Tests with Modernizr if supports HTML5 formvalidation
-    if (!Modernizr.formvalidation) {
+    // ugly browser sniffer for form validation
+    if (unsupportedBrowsers) {
       Modernizr.load({
         load: [
           'jquery.validate.min.js'
