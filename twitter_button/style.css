@@ -30,6 +30,7 @@ button {
   color: #cfcfcf;
   font-size: 21em;
   cursor: pointer;
+  outline: none;
   background: rgb(251,251,251);
   background: -moz-linear-gradient(top,  rgba(251,251,251,1) 0%, rgba(218,218,218,1) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,1)), color-stop(100%,rgba(218,218,218,1)));
@@ -42,20 +43,20 @@ button {
   height: 500px;
   padding: 20px 0 0 10px;
   border: none;
-  text-shadow: 0 -3px 3px #cfcfcf, 0 -5px 4px #9d9d9d, 0 -7px 0 #444, 0 2px 0 #fff, 0 2px 6px #fafafa;
-  -moz-box-shadow: inset 0 5px 3px #fff, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 120px 90px rgba(0,0,0,0.2);
-  -webkit-box-shadow:  inset 0 5px 3px #fff, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 120px 90px rgba(0,0,0,0.2);
-  box-shadow:  inset 0 5px 3px #fff, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 120px 90px rgba(0,0,0,0.2);
+  text-shadow: 0 -3px 3px #cfcfcf, 0 -4px 4px #9d9d9d, 0 -6px 0 #999, 0 2px 0 #f9f9f9, 0 2px 6px #fafafa;
+  -moz-box-shadow: inset 0 5px 3px #fdfdfd, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 130px 90px rgba(0,0,0,0.2);
+  -webkit-box-shadow:  inset 0 5px 3px #fdfdfd, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 130px 90px rgba(0,0,0,0.2);
+  box-shadow: inset 0 5px 3px #fdfdfd, inset 0 10px 15px #fafafa, 0 6px 3px #555, 0 12px 5px #777, 0 20px 15px #999, 0 40px 30px rgba(0,0,0,0.1), 0 130px 90px rgba(0,0,0,0.2);
   -moz-border-radius: 250px;
   -webkit-border-radius: 250px;
   border-radius: 250px;
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* on tap (iphone/ipad) don't grey button */
 
   /* transitions */
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  -moz-transition: all .4s;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
 }
 
 /* on hover switch the gradients */
@@ -69,7 +70,7 @@ button:hover {
   background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(224,224,224,1) 100%);
   background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(224,224,224,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e0e0e0',GradientType=0 );
-  text-shadow: 0 -3px 3px #ddd, 0 -5px 4px #aaa, 0 -7px 0 #777, 0 2px 0 #fff, 0 2px 6px #fafafa;
+  text-shadow: 0 -3px 3px #ddd, 0 -4px 4px #aaa, 0 -6px 0 #999, 0 2px 0 #f9f9f9, 0 2px 6px #fafafa;
 }
 
 /* on active move the button down and change box shadow */
@@ -77,17 +78,17 @@ button:active {
   padding-top: 30px;
   color: #bbb;
   background: rgb(183,183,183);
-  background: -moz-linear-gradient(top,  rgba(183,183,183,1) 0%, rgba(255,255,255,1) 70%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(183,183,183,1)), color-stop(70%,rgba(255,255,255,1)));
-  background: -webkit-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(255,255,255,1) 70%);
-  background: -o-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(255,255,255,1) 70%);
-  background: -ms-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(255,255,255,1) 70%);
-  background: linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(255,255,255,1) 70%);
+  background: -moz-linear-gradient(top,  rgba(183,183,183,1) 0%, rgba(244,244,244,1) 70%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(183,183,183,1)), color-stop(70%,rgba(244,244,244,1)));
+  background: -webkit-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(244,244,244,1) 70%);
+  background: -o-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(244,244,244,1) 70%);
+  background: -ms-linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(244,244,244,1) 70%);
+  background: linear-gradient(top,  rgba(183,183,183,1) 0%,rgba(244,244,244,1) 70%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7b7b7', endColorstr='#ffffff',GradientType=0 );
-  text-shadow: 0 -3px 3px #bbb, 0 -5px 4px #aaa, 0 -7px 0 #777, 0 2px 0 #fff, 0 2px 6px #fafafa;
-  -moz-box-shadow: inset 0 3px 5px #333, inset 0 8px 20px #555, 0 3px 2px #fff, 0 5px 5px #fcfcfc;
-  -webkit-box-shadow: inset 0 3px 5px #333, inset 0 8px 20px #555, 0 3px 2px #fff, 0 5px 5px #fcfcfc;
-  box-shadow: inset 0 3px 5px #333, inset 0 8px 20px #555, 0 3px 2px #fff, 0 5px 5px #fcfcfc;
+  text-shadow: 0 -3px 3px #bbb, 0 -5px 4px #aaa, 0 -7px 0 #777, 0 2px 0 #fdfdfd, 0 2px 6px #fafafa;
+  -moz-box-shadow: inset 0 10px 60px rgba(0,0,0,.4), inset 0 3px 5px #777, inset 0 8px 20px #888, 0 3px 2px #fdfdfd, 0 5px 5px #fcfcfc;
+  -webkit-box-shadow: inset 0 10px 60px rgba(0,0,0,.4), inset 0 3px 5px #777, inset 0 8px 20px #888, 0 3px 2px #fdfdfd, 0 5px 5px #fcfcfc;
+  box-shadow: inset 0 10px 60px rgba(0,0,0,.4), inset 0 3px 5px #777, inset 0 8px 20px #888, 0 3px 2px #fdfdfd, 0 5px 5px #fcfcfc;
 }
 
 
