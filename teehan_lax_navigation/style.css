@@ -190,6 +190,7 @@ nav.expanded {
   position: fixed;
   cursor: default;
   background: rgba(255,255,255,.85);
+  overflow-y: scroll;
 }
 
 /* positions navigation content */
