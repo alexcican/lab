@@ -19,7 +19,7 @@ a, a:visited, nav {
 -webkit-transition: color 0.5s, background 0.7s, -webkit-border-radius 0.7s, text-indent 0.2s;
 -o-transition: color 0.5s, background 0.7s, border-radius 0.7s, text-indent 0.2s;
 transition: color 0.5s, background 0.7s, border-radius 0.7s, text-indent 0.2s;
--webkit-tap-highlight-color: rgba(0,0,0,0); 
+-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -119,8 +119,8 @@ text-indent: 0;
 top: 55px;
 left: 23px;
 content: "";
-width: 0; 
-height: 0; 
+width: 0;
+height: 0;
 border-left: 7px solid transparent;
 border-right: 7px solid transparent;
 border-bottom: 7px solid #6daeaf;

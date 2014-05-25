@@ -200,6 +200,8 @@ nav.expanded {
   transform: translate(0,-700px);
   opacity: 0;
   padding-top: 2em;
+  width: 50%;
+  margin: 0 auto;
   text-align: center;
   -webkit-transition: -webkit-transform .15s, opacity .7s;
   -moz-transition: -moz-transform .15s, opacity .7s;
@@ -209,13 +211,12 @@ nav.expanded {
 
 /* shows navigation */
 nav.expanded #navigation {
-  -webkit-transform: translate(0,0);
+  -webkit-transform: translate(0,0); /* hardware acceleration */
   -moz-transform: translate(0,0);
   -o-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
 }
-
 
 
 /* === MENU NAVIGATION CONTENT === */
