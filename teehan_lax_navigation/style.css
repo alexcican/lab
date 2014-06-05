@@ -98,7 +98,7 @@ nav {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 46px;
+  height: 32px; /* smaller height because font is smaller */
   padding-top: 8px;
   right: 0;
   z-index: 1000;
@@ -229,7 +229,7 @@ nav.expanded #navigation {
 
 /* makes link font bigger */
 #navigation ul a {
-  font-size: 3.3em;
+  font-size: 1.8em;
   font-weight: bold;
   padding: 0 15%;
 }
@@ -365,5 +365,15 @@ footer:hover {
 @media screen and (min-width: 768px){
   body {
     font-size: 1.125em;
+  }
+
+  /* bigger nav height because font is bigger */
+  nav {
+    height: 46px;
+  }
+
+  /* bigger font size */
+  #navigation ul a {
+    font-size: 3.3em;
   }
 }
