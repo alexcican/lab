@@ -41,6 +41,7 @@ body {
 /* when navigation is shown, don’t allow scrolling of content */
 body.no_scroll {
   overflow: hidden;
+  height: 100%;
 }
 
 /* Firefox fix for overflow: hidden. Scroll bar is hidden and moves everything to the right */
